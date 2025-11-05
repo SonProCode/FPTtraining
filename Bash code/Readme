@@ -1,0 +1,76 @@
+🧩 Bài 1 — Cơ bản: Xin chào và thao tác biến
+🎯 Mục tiêu
+
+Làm quen với biến, nhập dữ liệu từ người dùng, và xuất kết quả.
+
+🔧 Yêu cầu
+
+Viết script hello_user.sh:
+
+Hỏi tên và tuổi người dùng.
+
+Nếu tuổi < 18 → in “Bạn chưa đủ tuổi sử dụng hệ thống!”
+
+Nếu tuổi ≥ 18 → in “Xin chào [Tên], chúc bạn một ngày tốt lành!”
+
+Dùng cú pháp read để nhập dữ liệu.
+
+Thêm dòng đầu #!/usr/bin/env bash và nhớ cấp quyền thực thi (chmod +x hello_user.sh).
+
+⚙️ Bài 2 — Trung bình: Quản lý file và vòng lặp
+🎯 Mục tiêu
+
+Luyện tập loop, điều kiện file, redirect output.
+
+🔧 Yêu cầu
+
+Viết script file_report.sh:
+
+Nhập tên thư mục cần kiểm tra.
+
+Nếu thư mục không tồn tại → báo lỗi và thoát.
+
+Nếu tồn tại:
+
+Liệt kê tất cả file trong thư mục đó.
+
+Đếm số file .sh và .txt, ghi kết quả vào file report.txt.
+
+In ra màn hình nội dung report.txt sau khi hoàn tất.
+
+Gợi ý: dùng for file in "$dir"/*; do ... done và [[ -f $file ]], [[ $file == *.sh ]].
+
+💡 Bài 3 — Nâng cao: Script đa chức năng (case + hàm + mảng)
+🎯 Mục tiêu
+
+Luyện tập hàm, case, mảng, điều kiện số, tham số dòng lệnh.
+
+🔧 Yêu cầu
+
+Viết script system_tool.sh:
+
+Nhận một tham số: --cpu, --memory, --disk, hoặc --all.
+
+Dùng case để thực thi hàm tương ứng:
+
+show_cpu(): in ra 5 dòng đầu từ lscpu.
+
+show_memory(): in thông tin từ free -h.
+
+show_disk(): in dung lượng từ df -h.
+
+Nếu --all → chạy cả 3 hàm trên.
+
+Nếu tham số sai hoặc không có → in hướng dẫn sử dụng.
+
+Lưu log đầu ra vào mảng logs, rồi ghi toàn bộ ra file system_report.txt.
+
+🏁 Gợi ý luyện tập thêm
+
+Sau khi hoàn thành 3 bài:
+
+Thử kết hợp thêm functions để refactor code.
+
+Thêm xử lý lỗi bằng $?.
+
+Dùng date >> log.txt để tạo log.
